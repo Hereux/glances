@@ -13,7 +13,7 @@ services:
       - "/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock:ro"
       - "./glances.conf:/glances/conf/glances.conf"
     environment:
-      - TZ=${TZ}
+      - TZ="Europe/Berlin"
       - "GLANCES_OPT=-C /glances/conf/glances.conf -w"
     # Uncomment for GPU compatibility (Nvidia) inside the container
     # deploy:
